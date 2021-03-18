@@ -1,0 +1,41 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+	<title>Class</title> 
+</head> 
+
+<body style = "text-align:center;"> 
+	<p>Registered class</p> 
+    Username:<input type="text" id="name"><br>
+    Email:<input type="text" id="email"><br>
+    Password:<input type="text" id="password"><br>
+	<button onclick = "user.printx()"> Submit </button><br> 
+	<input type="text" id ="output">
+    <script> 
+    var name=document.getElementById("name").value;
+    var email=document.getElementById("email").value;
+    var password=document.getElementById("password").value;
+        class user{
+            static count=0;
+            constructor(name, email, password){
+                this.name=name;
+                this.email=email;
+                this.password=password;
+            }
+            printx(){
+                let x=user.count();
+                var a=[x];
+                for(i=0;i<x;i++)
+                document.getElementById("output").value=a[i];
+            }
+            count(){
+                user.count=user.count+1;
+                document.getElementById("output").value=count;
+            }
+            register(){
+                
+            }
+        } 
+	</script> 
+</body> 
+</html> 
